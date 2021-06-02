@@ -1,8 +1,11 @@
-const wordSearch = (letters, word) => { 
-    const horizontalJoin = letters.map(ls => ls.join(''))
-    for (l of horizontalJoin) {
-        if (l.includes(word)) return true
+const wordSearch = (letters, word) => {
+    let result = true;
+    const horizontalJoin = letters.map(ls => ls.join(''));
+    for (let l of horizontalJoin) {
+      if (l.includes(word))
+        return result;
     }
-}
-
-module.exports = wordSearch
+    return false;
+  };
+  
+  module.exports = wordSearch;
